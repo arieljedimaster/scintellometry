@@ -386,7 +386,7 @@ class VDIFFrameHeader(object):
             self.data = self.data[:4]
         if verify:
             self.verify()
-
+        self['seconds'] = self['seconds'] + 12 * 3600
         return self
 
     def __getitem__(self, item):
